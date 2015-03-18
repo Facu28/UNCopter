@@ -26,7 +26,7 @@ Bloque para identificación del sistema por el método de mínimos cuadrados
 
 typedef struct{
 int n,l,i,j; //n=cantidad de componentes del vector m que corresponden a y(k-1)...y(k-n);lcantidad de componentes del vector m que corresponden a u(k-1)...u(k-n)
-float m[5],Q[5],Pk[2],error,FO,Pk_1,Ak,Ak_1,Bk,Bk_1,Yk_1;;
+float m[5],Q[5],Pk[2],error,FO,Pk_1,Ak,Ak_1,Bk,Bk_1,Yk_1; // FO= Factor de Olvido
 int k; //estimation number
 } ident;
 
