@@ -158,7 +158,7 @@ void hardware_init(void * p){
       //----------------------------------------
       //Identification init
       //----------------------------------------
-      // Y(k) + a1Y(k-1) + ......anY(k-n)=bU(k) + ......blU(k-l) ===> Y$=[-Y(k-1)....-Y(k-n) U(k)....U(k-l)]*[a1...an b....bl]'
+      // Y(k) + a1Y(k-1) + ......anY(k-n)=bU(k-1) + ......blU(k-l) ===> Y$=[-Y(k-1)....-Y(k-n) U(k-1)....U(k-l)]*[a1...an b....bl]'
 
       quadrotor.id_rate[i].n=1; // n= orden de Y
       quadrotor.id_rate[i].l=1; // l= orden de U
@@ -166,6 +166,8 @@ void hardware_init(void * p){
       quadrotor.id_atti[i].l=2;
       quadrotor.id_rate[i].k=0;
       quadrotor.id_atti[i].k=0;
+      quadrotor.id_rate[i].FO=0.95;
+      quadrotor.id_atti[i].FO=0.95;
       ident_Init(&quadrotor.id_rate[i]);
       //-----------------------------------------
    }
