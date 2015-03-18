@@ -61,7 +61,7 @@ q->error=Yk-Y$;
 }
 
 void estimate (ident *q,float Uk, float Yk ){
-int k,n,l,t=0,r=0,i,j;
+int k,n,l,t=0,r=0,i,j,FO;
 		n=q->n;//Y(k-1)....Y(k-n)
 		l=q->l;//U(k)....U(k-l)
 		k=q->k;//numero de estumación
