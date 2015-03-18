@@ -1,0 +1,6 @@
+11:52:20 **** Incremental Build of configuration Debug for project Autopilot ****
+make all 
+make: Nothing to be done for `all'.
+
+11:52:21 Build Finished (took 1s.115ms)
+
