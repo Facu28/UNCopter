@@ -9,6 +9,8 @@
 #include "Ident.h"
 void ident_Init (ident *q){
 	int r,n,l;
+	q->i=0;
+	q->j=0;
 	n=q->n;
 	l=q->l;
 	q->k=0;
@@ -69,16 +71,17 @@ q->error=Yk-Y$;
 }
 
 void estimate (ident *q,float Uk, float Yk ){
-int k,n,l,t=0,r=0,i,j,FO;
+int k,n,l,t=0,r=0,i,j;
 		n=q->n;//Y(k-1)....Y(k-n)
 		l=q->l;//U(k)....U(k-l)
 		k=q->k;//numero de estumación
 		i=q->i;//tomo valor de iteración de la estructura
 		j=q->j;//tomo valor de iteración de la estructura
-		FO=q->FO;
-float m[n+l],Q[n+l],K[n+l],Y$,m2;//m= polinomio regresor, Q=parámetros a calcular, K matriz de ganancias de corrección, Y$=salida estimada,m2=polinomio regresor al cuadrado
 
+float m[n+l],Q[n+l],K[n+l],Y$,m2,FO;//m= polinomio regresor, Q=parámetros a calcular, K matriz de ganancias de corrección, Y$=salida estimada,m2=polinomio regresor al cuadrado
+FO=q->FO;
 //valores iniciales del algoritmo
+/*
 if(k==0){
 		q->i=0;
 		q->j=0;
@@ -88,6 +91,7 @@ if(k==0){
 		q->m[r]= 10;
 		q->Q[r]= 10;}
 }
+*/
 k=k+1;
 q->k=k;
 //obtengo el polinomio regresor de la estructura ident
