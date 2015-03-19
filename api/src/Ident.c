@@ -8,12 +8,20 @@
 #include "math.h"
 #include "Ident.h"
 void ident_Init (ident *q){
+	int r,n,l;
+	n=q->n;
+	l=q->l;
 	q->k=0;
-	q->Pk_1=10000;
+	q->Pk_1=100000;
 	q->Ak_1=10;
 	q->Ak=10;
 	q->Bk_1=10;
 	q->Bk=10;
+	q->Pk[0]=100000;
+	q->Pk[1]=100000;
+	for (r=0;r<n+l;r++){
+		q->m[r]= 10;
+		q->Q[r]= 10;}
 }
 
 float vectors_dot_prod(float *x, float *y, int n)

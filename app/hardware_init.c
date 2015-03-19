@@ -164,11 +164,9 @@ void hardware_init(void * p){
       quadrotor.id_rate[i].l=1; // l= orden de U
       quadrotor.id_atti[i].n=3;
       quadrotor.id_atti[i].l=2;
-      quadrotor.id_rate[i].k=0;
-      quadrotor.id_atti[i].k=0;
       quadrotor.id_rate[i].FO=0.95;
       quadrotor.id_atti[i].FO=0.95;
-      ident_Init(&quadrotor.id_rate[i]);
+      ident_Init(&quadrotor.id_rate[i]); //inicializo valores de algoritmo de identificación
       //-----------------------------------------
    }
 

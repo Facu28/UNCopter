@@ -211,9 +211,9 @@ void DataCollection(void *p){
       //   prescaler = PRESCALER_VALUE;
          quadrotor.sv.altitudeCtrlOutput = qPID_Procees(&quadrotor.altitudeController,quadrotor.sv.setpoint[ALTITUDE],quadrotor.sv.altitude);
       //}
-      //-----------------------------------------------------------------------
-      // Bloque de identificación
-      //-----------------------------------------------------------------------
+ //-----------------------------------------------------------------------
+ // Bloque de identificación
+ //-----------------------------------------------------------------------
 
   if(Identification == ENABLED){
          estimate(&quadrotor.id_rate[ROLL], quadrotor.sv.rateCtrlOutput[ROLL],quadrotor.sv.rate[ROLL]);
@@ -234,8 +234,8 @@ void DataCollection(void *p){
        l=0;
        };
 
-         //-----------------------------------------------------------------------
-       // Control Output stage
+      //-----------------------------------------------------------------------
+      // Control Output stage
       //-----------------------------------------------------------------------
 
       control[ROLL] = quadrotor.sv.rateCtrlOutput[ROLL];
